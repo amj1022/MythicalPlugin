@@ -21,9 +21,11 @@ This plugin is still in early development phases. The purpose of this being to a
 
 ## Usage
 
-To get the plugin running, the user who is responsible for hosting the server will place the jar file into the plugins folder that was generated from creating the server.
+To get the plugin running, the user who is responsible for hosting the server will place the jar file into the plugins folder that was generated from creating the server. 
 
 From there, the server will need to either be launched with the run.bat file or by reloading the server by using "/reload" in the in-game console.
+
+The jar file will later be placed on BuiltByBit for usage.
 
 ## Contact
 
