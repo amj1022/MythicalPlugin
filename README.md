@@ -25,6 +25,8 @@ To get the plugin running, the user who is responsible for hosting the server wi
 
 From there, the server will need to either be launched with the run.bat file or by reloading the server by using "/reload" in the in-game console.
 
+In game, the user can either type "/wands" for all wands or "/[wand name]" for a specific wand in the console to obtain wands.
+
 The jar file will later be placed on BuiltByBit for usage.
 
 ## Contact
