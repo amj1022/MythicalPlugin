@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Mythical">
+    <output-path>$PROJECT_DIR$/out/artifacts/Mythical</output-path>
+    <root id="archive" name="Mythical.jar">
+      <element id="module-output" name="Mythical" />
+    </root>
+  </artifact>
+</component>

@@ -1,0 +1,15 @@
+name: Mythical
+main: com.angela.Mythical
+version: 1.0
+api-version: 1.20
+commands:
+  wands:
+    description: gives all wands
+  firewand:
+    description: gives player a wand that shoots fire balls
+  snowwand:
+    description: gives player a wand that shoots snowballs
+  healthwand:
+    description: gives player a wand that shoots a health potion
+  poisonwand:
+    description: gives player a wand that shoots poison potion
