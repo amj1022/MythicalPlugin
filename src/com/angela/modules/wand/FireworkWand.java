@@ -1,8 +1,7 @@
-package com.angela.modules;
+package com.angela.modules.wand;
 
 import com.angela.Mythical;
 import org.bukkit.*;
-import org.bukkit.block.data.type.Fire;
 import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.block.Action;
@@ -20,7 +19,7 @@ import java.util.List;
 import java.util.function.BiFunction;
 
 //color, trail, fade, with(effect), build
-public class FireworkWand extends Wand{
+public class FireworkWand extends Wand {
     private Color color;
     private boolean trail;
     private boolean flicker;
@@ -31,9 +30,9 @@ public class FireworkWand extends Wand{
     private MetadataValue metadata;
     private static List<FireworkData> fireworks = new ArrayList<>();
 
-    public FireworkWand(String name, Color color, boolean trail, boolean flicker,
+    public FireworkWand(String id, String name, Color color, boolean trail, boolean flicker,
                         FireworkEffect.Type type, double velocityMultiplier, PotionType potionType, String... lore) {
-        super(name, EntityType.FIREWORK_ROCKET, velocityMultiplier,lore);
+        super(id, name, EntityType.FIREWORK_ROCKET, velocityMultiplier,lore);
         this.color = color;
         this.trail = trail;
         this.flicker = flicker;

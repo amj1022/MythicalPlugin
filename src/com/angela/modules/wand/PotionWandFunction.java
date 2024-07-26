@@ -1,4 +1,4 @@
-package com.angela.modules;
+package com.angela.modules.wand;
 
 import org.bukkit.Location;
 import org.bukkit.Material;
@@ -9,7 +9,6 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.PotionMeta;
 
 import java.util.function.BiFunction;
-import java.util.function.Function;
 
 public class PotionWandFunction implements BiFunction<EntityDamageByEntityEvent, FireworkWand, Void> {
 
@@ -28,6 +27,7 @@ public class PotionWandFunction implements BiFunction<EntityDamageByEntityEvent,
                 event.setCancelled(true);
             }
             ItemStack potion = new ItemStack(Material.SPLASH_POTION);
+            potion.getItemMeta().setCustomModelData(1);
             PotionMeta meta = (PotionMeta) potion.getItemMeta();
             meta.setBasePotionType(fireworkWand.getPotionType());
             potion.setItemMeta(meta);
