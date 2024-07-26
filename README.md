@@ -29,8 +29,10 @@ In game, the user can either type "/wands" for all wands or "/[wand name]" for a
 
 The jar file will later be placed on BuiltByBit for usage.
 
+
 ## Contact
 
 Angela John: johnangela.dev@gmail.com
 
 Project Link: https://github.com/amj1022/MythicalPlugin
+

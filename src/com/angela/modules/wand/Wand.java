@@ -1,9 +1,9 @@
-package com.angela.modules;
+package com.angela.modules.wand;
 
 import com.angela.Mythical;
+import org.bukkit.ChatColor;
 import org.bukkit.Location;
 import org.bukkit.Material;
-import org.bukkit.NamespacedKey;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -11,11 +11,9 @@ import org.bukkit.entity.*;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.block.Action;
-import org.bukkit.event.entity.PotionSplashEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 import org.bukkit.inventory.meta.ItemMeta;
-import org.bukkit.persistence.PersistentDataContainer;
 
 import java.util.List;
 
@@ -25,8 +23,9 @@ public class Wand implements Listener, CommandExecutor {
     private EntityType entityType;
     private double velocityMultiplier;
     private String name;
+    private Mythical plugin = Mythical.getInstance();
 
-    public Wand(String name, EntityType entityType, double velocityMultiplier, String ...lore){
+    public Wand(String id, String name, EntityType entityType, double velocityMultiplier, String ...lore){
         this.entityType = entityType;
         this.velocityMultiplier = velocityMultiplier;
         this.name = name;
@@ -36,7 +35,8 @@ public class Wand implements Listener, CommandExecutor {
         meta.setLore(List.of(lore));
         meta.setMaxStackSize(1);
         wand.setItemMeta(meta);
-
+        plugin.getCommand(id).setExecutor(this);
+        plugin.getServer().getPluginManager().registerEvents(this, plugin);
     }
 
     @EventHandler(ignoreCancelled = false)
@@ -85,6 +85,7 @@ public class Wand implements Listener, CommandExecutor {
 
     public void give(Player player) {
         player.getInventory().addItem(wand);
+        player.sendMessage(ChatColor.LIGHT_PURPLE + player.getName() + " has received a " + name);
     }
 
     public String getName() {

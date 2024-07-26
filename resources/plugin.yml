@@ -2,9 +2,14 @@ name: Mythical
 main: com.angela.Mythical
 version: 1.0
 api-version: 1.20
+
 commands:
-  wands:
+
+#  Wands
+  wand:
     description: gives all wands
+    aliases:
+      - wands
   firewand:
     description: gives player a wand that shoots fire balls
   snowwand:
@@ -13,3 +18,13 @@ commands:
     description: gives player a wand that shoots a health potion
   poisonwand:
     description: gives player a wand that shoots poison potion
+  icewand:
+    description: gives player a wand that shoots slowness potion
+  wickedwand:
+    description: gives player a wand that shoots harming potion
+  sneakywand:
+    description: gives player a wand that shoots invisibility potion
+  oceanwand:
+    description: gives player a wand that shoots water breathing potion
+  warriorwand:
+    description: gives player a wand that shoots strength potion
