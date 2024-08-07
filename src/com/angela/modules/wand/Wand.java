@@ -34,6 +34,7 @@ public class Wand implements Listener, CommandExecutor {
         meta.setDisplayName(name);
         meta.setLore(List.of(lore));
         meta.setMaxStackSize(1);
+        meta.setCustomModelData(18);
         wand.setItemMeta(meta);
         plugin.getCommand(id).setExecutor(this);
         plugin.getServer().getPluginManager().registerEvents(this, plugin);

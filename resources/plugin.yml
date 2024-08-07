@@ -4,6 +4,9 @@ version: 1.0
 api-version: 1.20
 
 commands:
+# Hats
+  wizardhat:
+    description: gives player a regular wizard hat
 
 #  Wands
   wand:

@@ -1,5 +1,7 @@
 package com.angela;
 
+import com.angela.modules.hat.Hat;
+import com.angela.modules.hat.HatModule;
 import com.angela.modules.wand.WandsModule;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -23,6 +25,10 @@ public class Mythical extends JavaPlugin {
         if(config.getBoolean("modules.wand.enable", true)){
             console.sendMessage(ChatColor.GREEN + "Enabling WandModule");
             new WandsModule(this);
+        }
+        if(config.getBoolean("modules.hat.enable", true)){
+            console.sendMessage(ChatColor.GREEN + "Enabling HatModule");
+            new HatModule(this);
         }
 
 
