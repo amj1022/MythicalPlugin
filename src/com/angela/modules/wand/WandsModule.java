@@ -1,16 +1,15 @@
 package com.angela.modules.wand;
 
 import com.angela.Mythical;
-import org.bukkit.Bukkit;
-import org.bukkit.ChatColor;
-import org.bukkit.Color;
-import org.bukkit.FireworkEffect;
+import org.bukkit.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.command.TabCompleter;
 import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
+import org.bukkit.inventory.ItemStack;
+import org.bukkit.inventory.meta.ItemMeta;
 import org.bukkit.potion.PotionType;
 
 import java.util.ArrayList;
@@ -129,14 +128,15 @@ public class WandsModule implements CommandExecutor {
         //       0
         // wand list
         if(commandSender instanceof Player) {
+
             if(args.length > 0) {
                 if(args[0].equalsIgnoreCase("give")){ // give command
                     String playerName = args[1];
                     String wandName = args[2];
-                    Player player = Bukkit.getPlayer(playerName);
+                    Player target = Bukkit.getPlayer(playerName);
                     for(Map.Entry<String, Wand> entry: wands.entrySet()){
                         if(entry.getKey().equalsIgnoreCase(wandName)){
-                            entry.getValue().give(player);
+                            entry.getValue().give(target);
                         }
                     }
 

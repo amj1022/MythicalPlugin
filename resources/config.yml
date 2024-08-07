@@ -1,3 +1,5 @@
 modules:
   wand:
     enabled: true
+  hat:
+    enabled: true
